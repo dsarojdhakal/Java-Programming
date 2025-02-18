@@ -1,0 +1,17 @@
+Configuring Apache Tomcat to host Servlet and JSP files involves several steps.
+Step 1: Download Apache Tomcat
+
+        Visit the Apache Tomcat Website
+        Choose the Version
+        Download
+
+Step 2: Install Apache Tomcat
+
+Step 3: Configure Environment Variables(Ensure you have the Java Development Kit (JDK) installed.)
+
+Step 4: Start Apache Tomcat
+
+Step 5: Deploying Your Web Application
+        (Add web content and create xml file)
+
+Step 6: Access the Web Application
