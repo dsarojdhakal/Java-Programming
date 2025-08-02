@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class FileWriterExample {
     public static void main(String[] args) {
-        String data = "Hello welcome to Bachelor of Information Technology";
+        String data = "Hello welcome to Bachelor of\nInformation Technology";
         File file = new File("example.txt");
 
         if(file.exists()){

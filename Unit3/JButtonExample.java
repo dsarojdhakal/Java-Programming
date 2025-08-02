@@ -1,5 +1,4 @@
 import java.awt.event.ActionListener;
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 
 import javax.swing.*;
@@ -28,14 +27,14 @@ public class JButtonExample {
         loginBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                    String messageUsername  = fieldUsername.getText();
-                    String messagePassword = new String (fieldPassword.getPassword());
-                    if(messagePassword.isEmpty() && messageUsername.isEmpty())
+                    String username  = fieldUsername.getText();
+                    String password = new String (fieldPassword.getPassword());
+                    if(password.isEmpty() || username.isEmpty())
                     {
                         displayMessage.setText("Please try again");
                     }
                     else{
-                        displayMessage.setText("Username : "+ messageUsername +  " and Password : " + messagePassword);
+                        displayMessage.setText("Username : "+ username +  " and Password : " + password);
                     }
 
             }

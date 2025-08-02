@@ -4,7 +4,7 @@ public class FISExample {
     public static void main(String[] args) {
         File file = new File("example.txt");
         if(file.exists()){
-            try (FileInputStream fis = new FileInputStream("file")) {
+            try (FileInputStream fis = new FileInputStream(file)) {
                 int content;
                 while ((content = fis.read()) != -1) {
                     System.out.print((char) content);

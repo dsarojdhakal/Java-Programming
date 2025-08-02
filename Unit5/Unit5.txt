@@ -1,0 +1,117 @@
+a. JDBC Basic
+
+    1. JDBC
+
+        -JDBC stands for Java Database Connectivity.
+
+        -It is an API (Application Programming Interface) in Java.
+
+        -Helps Java programs connect to databases (like MySQL, Oracle, PostgreSQL, etc.).
+
+        -Allows to send SQL queries, insert data, update records, and retrieve results.
+
+        -Makes it possible to build Java applications that work with databases.
+
+        -JDBC helps to communicate with different databases.
+
+    2. Main Features of JDBC
+
+        -Supports SQL commands (SELECT, INSERT, UPDATE, DELETE).
+
+        -Allow to read and write data in the database.
+
+        -Works with all major databases through different drivers.
+
+        -Can handle both simple and complex queries.
+
+        -Helps with error handling through exceptions.
+
+
+
+b.Different Types of Database Drivers in JDBC
+
+    1. Type 1: JDBC-ODBC Bridge Driver
+
+        -Converts JDBC calls into ODBC calls (needs extra translation).
+
+        -Depends on ODBC drivers installed on the system.
+
+        -Works with almost any database that supports ODBC.
+
+        -Slow performance due to two-step conversion.
+
+        -Deprecated (removed from Java 8 onwards).
+
+        -Platform-dependent – not suitable for all systems.
+
+        -Mostly used in old or legacy systems where no other option is available.
+
+        -Not recommended for modern applications.
+
+
+    2. Type 2: Native-API Driver
+
+        -Converts JDBC calls into native code of the database (uses native libraries).
+
+        -Faster than Type 1 (no ODBC in between).
+
+        -Requires native database client software on the machine.
+
+        -Platform-dependent – works only on specific OS.
+
+        -Not 100% Java – limits portability.
+
+        -Example: oracle.jdbc.OracleDriver (Oracle OCI).
+
+        -Suitable for high-performance apps where platform is fixed.
+
+
+    3. Type 3: Network Protocol Driver (Middleware Driver)
+
+        -JDBC calls are sent to a middleware server, which then communicates with the database.
+
+        -Database-independent – one driver can connect to different databases.
+
+        -Fully written in Java – platform-independent.
+
+        -Requires network connection and middleware setup.
+
+        -Good for web-based or enterprise-level applications.
+
+        -Example: IBM WebSphere’s JDBC driver.
+
+
+    4. Type 4: Thin Driver (Pure Java Driver)
+
+        -Converts JDBC calls directly into the database protocol.
+
+        -No need for native libraries or middleware.
+
+        -Fully Java-based – platform-independent and portable.
+
+        -Best performance among all drivers.
+
+        -Easy to use and widely preferred in modern applications.
+
+        -Example: com.mysql.cj.jdbc.Driver (MySQL), org.postgresql.Driver (PostgreSQL).
+
+        -Ideal for web apps, Android apps, and production systems.
+
+
+
+C. Core JDBC Classes & Interfaces
+
+    -DriverManager: Loads the database driver and manages connections.
+
+    -Connection: Connects to the database.
+
+    -Statement: Sends SQL queries.
+
+    -PreparedStatement: Sends parameterized queries.
+
+    -ResultSet: Holds the result returned from a SELECT query.
+
+
+
+javac -cp .:lib/mysql-connector-java-9.4.0.jar CreateTableJDBC.java
+java -cp .:lib/mysql-connector-java-9.4.0.jar CreateTableJDBC

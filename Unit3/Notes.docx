@@ -1,0 +1,70 @@
+Unit3 : GUI
+
+a.Difference between AWT and Swing:
+
+  1. AWT (Abstract Window Toolkit) is Java's original platform-dependent GUI toolkit, 
+    while Swing is a more advanced, platform-independent GUI toolkit built on top of AWT.
+
+  2. AWT components are heavyweight (rely on native OS resources), whereas Swing 
+    components are lightweight (rendered by Java, not the OS).
+
+  3. Swing provides a richer set of GUI components (like JTable, JTree, etc.) 
+    compared to AWT.
+
+  4. Swing supports pluggable look-and-feel, allowing applications to change 
+    their appearance at runtime; AWT does not.
+
+  5. Swing components are more flexible and customizable than AWT components.
+
+  6. Event handling in Swing is more powerful and consistent than in AWT.
+
+  7. AWT is part of Java since JDK 1.0, while Swing was introduced in JDK 1.2.
+
+
+
+b.Common Swing Components:
+
+    1. JButton – A push button that can trigger actions.
+    2. JLabel – Displays a short string or image icon.
+    3. JTextField – Allows the entering or editing of a single line of text.
+    4. JTextArea – Allows the editing of multiple lines of text.
+    5. JCheckBox – A box that can be checked or unchecked.
+    6. JRadioButton – A radio button for mutually exclusive options.
+    7. JComboBox – A drop-down list for selecting one item.
+    8. JList – Displays a list of items for selection.
+    9. JTable – Displays data in a two-dimensional table.
+    10. JScrollPane – Provides scrollable view of components.
+    11. JPanel – A generic container for organizing components.
+    12. JFrame – The main window container for Swing applications.
+
+
+c. Methods for Event Handling in Swing:
+
+  1. Mouse-driven Event Handling:
+      - Mouse events are handled using the `MouseListener` and `MouseMotionListener` interfaces.
+      - Common methods:
+        - `mouseClicked(MouseEvent e)`
+        - `mousePressed(MouseEvent e)`
+        - `mouseReleased(MouseEvent e)`
+        - `mouseEntered(MouseEvent e)`
+        - `mouseExited(MouseEvent e)`
+        - `mouseDragged(MouseEvent e)`
+        - `mouseMoved(MouseEvent e)`
+
+  2. Keyboard-driven Event Handling:
+      - Keyboard events are handled using the `KeyListener` interface.
+      - Common methods:
+        - `keyPressed(KeyEvent e)`
+        - `keyReleased(KeyEvent e)`
+        - `keyTyped(KeyEvent e)`
+
+  3. Other Event Handling:
+      - Action events (e.g., button clicks) use the `ActionListener` interface:
+        - `actionPerformed(ActionEvent e)`
+      - Item events (e.g., checkbox/radio button state changes) use the `ItemListener` interface:
+        - `itemStateChanged(ItemEvent e)`
+      - Window events (e.g., window closing) use the `WindowListener` interface:
+        - `windowClosing(WindowEvent e)`, etc.
+
+  To handle events, components register listeners using methods like `addMouseListener()`, `addKeyListener()`, `addActionListener()`, etc.
+

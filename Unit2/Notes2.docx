@@ -1,0 +1,48 @@
+Introduction to Applet
+----------------------
+
+An applet is a small Java program that runs inside a web browser or an applet viewer. Applets are used to provide interactive features to web applications that cannot be provided by HTML alone.
+
+Key Points:
+- Applets are subclasses of `java.applet.Applet` or `javax.swing.JApplet`.
+- They are embedded in HTML pages using the `<applet>` tag (deprecated) or `<object>`/`<embed>` tags.
+- Applets have a well-defined life cycle managed by the browser or applet viewer.
+
+Standard Applet Methods
+-----------------------
+
+The following are the standard methods in the applet life cycle:
+
+1. `init()`
+    - Called once when the applet is first loaded.
+    - Used for initialization.
+
+2. `start()`
+    - Called after `init()` and every time the applet is revisited.
+    - Used to start or resume execution.
+
+3. `stop()`
+    - Called when the user leaves the applet's page.
+    - Used to suspend execution.
+
+4. `destroy()`
+    - Called when the applet is about to be destroyed.
+    - Used for cleanup.
+
+5. `paint(Graphics g)`
+    - Called to redraw the applet's output.
+    - Used for rendering graphics.
+
+
+
+    Comparison between Applet and Application
+    -----------------------------------------
+
+    | Feature           | Applet                                      | Application                          |
+    |-------------------|---------------------------------------------|--------------------------------------|
+    | Execution         | Runs inside a web browser or applet viewer  | Runs independently on the desktop    |
+    | Main Method       | Does not have `main()` method               | Has a `main()` method                |
+    | User Interface    | Uses AWT/Swing for GUI                      | Uses AWT/Swing/JavaFX for GUI        |
+    | Security          | Runs in a restricted sandbox environment    | Has full access to system resources  |
+    | Life Cycle        | Managed by browser/applet viewer            | Managed by the programmer            |
+    | Deployment        | Embedded in HTML pages                      | Distributed as JAR/executable files  |

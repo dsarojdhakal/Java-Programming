@@ -15,6 +15,8 @@
         public static void main(String[] args) throws Exception{
 
             Student s1 = new Student();
+            s1.age = 20;
+            s1.name ="Ram";
 
             File file = new File("student.txt");
 

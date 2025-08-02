@@ -22,7 +22,7 @@ public class MethodOverloading {
         int sum3 = calc.add(5, 10, 15);
         System.out.println("Addition of three integers: " + sum3 );
 
-        double sumDouble = calc.add(5.1, 10.5);
-        System.out.println("Addition of two doubles: " + sumDouble);
+        double s = calc.add(5.1, 10.5);
+        System.out.println("Addition of two doubles: " + s);
     }
 }

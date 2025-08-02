@@ -6,7 +6,7 @@ class Student implements Serializable {
 
     private String name;
     private int age;
-    private transient String password; 
+    private String password; 
 
     public Student(String name, int age, String password) {
         this.name = name;
@@ -35,8 +35,8 @@ public class ObjectSerializableExample {
         }
 
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filename))) {
-            Student deserializedStudent = (Student) ois.readObject();
-            System.out.println("Object deserialized: " + deserializedStudent);
+            Student ds = (Student) ois.readObject();
+            System.out.println("Object deserialized: " + ds);
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("An error occurred during deserialization.");
             e.printStackTrace();

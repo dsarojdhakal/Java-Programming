@@ -7,12 +7,6 @@ public class FOSExample {
     public static void main(String[] args) throws IOException {
         File file = new File("example.txt");
 
-        if (file.createNewFile()) {
-            System.out.println("File created successfully");
-        } else {
-            System.out.println("File already exists");
-        }
-
         try (FileOutputStream fos = new FileOutputStream(file)) {
             String data = "Hello, this is JAVA class in BIT-4!";
             fos.write(data.getBytes()); 

@@ -10,7 +10,7 @@ public class FileExample {
                 System.out.println("File created sucessfully");            
             }
             else{
-                System.out.println("File is not created");
+                System.out.println("File Already exists");
             }
         }
         catch(IOException e){

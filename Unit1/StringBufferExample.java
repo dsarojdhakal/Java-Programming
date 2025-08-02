@@ -1,21 +1,18 @@
 public class StringBufferExample {
     public static void main(String[] args) {
+
         StringBuffer buffer = new StringBuffer("Hello");
 
-        // Append
         buffer.append(" World");
-        System.out.println("Appended: " + buffer);
+        System.out.println("After Append: " + buffer);
 
-        // Insert
         buffer.insert(5, ",");
         System.out.println("Inserted comma: " + buffer);
 
-        // Delete
         buffer.delete(5, 6);
-        System.out.println("Deleted comma: " + buffer);
+        System.out.println("Deleted comma: " + buffer)p;
 
-        // Reverse
         buffer.reverse();
-        System.out.println("Reversed: " + buffer);
+        System.out.println("Reversed string: " + buffer);
     }
 }

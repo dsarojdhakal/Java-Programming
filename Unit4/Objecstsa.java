@@ -1,3 +1,7 @@
+//Write a Java program to demonstrate serialization and deserialization of an object.
+//The program should create a class with some fields, serialize an object of that class to a file, 
+//and then read the object back from the file, displaying its contents.
+
 import java.io.*;
 
 class Student implements Serializable {

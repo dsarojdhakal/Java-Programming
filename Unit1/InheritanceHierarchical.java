@@ -23,6 +23,6 @@ public class InheritanceHierarchical {
         cc.getdataA();
         cc.getdataC();  
         bb.getdataA();
-        bb.getdataB();     
+        bb.getdataB();  
     }   
 }
