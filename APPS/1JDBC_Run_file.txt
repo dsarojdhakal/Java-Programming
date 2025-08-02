@@ -1,7 +1,0 @@
-1. Compile JDBC file.
-    javac -cp .:/usr/share/java/mysql-connector-java-9.3.0.jar FileName.java
-
-2. Run JDBC file.
-    java -cp .:/usr/share/java/mysql-connector-java-9.3.0.jar FileName
-
-3. 
