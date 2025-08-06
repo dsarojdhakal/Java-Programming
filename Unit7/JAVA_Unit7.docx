@@ -1,0 +1,54 @@
+Unit 7: Distributed applications
+
+
+a. Introduction to Distributed Objects
+
+    Distributed objects are objects located on different computers.
+
+    They can communicate with each other over a network.
+
+    One object can call methods of another object on a different machine.
+
+    It helps build large and connected applications.
+
+    Looks like a normal object, but works remotely.
+
+    Allows sharing of work between different systems.
+
+
+b. Overview of RMI (Remote Method Invocation)
+
+    RMI allows Java programs to communicate over a network.
+
+    One Java object can call methods of another object on a different computer.
+
+    It works only with Java-to-Java communication.
+
+    RMI is used to build distributed applications in Java.
+
+    It uses object serialization to send data over the network.
+
+    RMI hides the network details from the programmer.
+
+
+c. RMI Architecture
+
+    RMI architecture defines how remote method calls work in Java.
+
+    It explains the flow of communication between client and server objects.
+
+    RMI architecture has client-side and server-side components.
+
+    It allows communication between objects in different JVMs.
+
+    components of RMI Architecture:
+
+        1. Client – Calls the remote method.
+        
+        2. Stub – Acts as a local object, sends request to server.
+        
+        3. RMI Registry – Stores remote objects(client looks up here).
+        
+        4. Skeleton – Receives request (used in old Java versions).
+        
+        5. Remote Object – The actual object that runs on server.

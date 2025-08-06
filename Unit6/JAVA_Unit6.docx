@@ -1,0 +1,133 @@
+Unit 6 : Socket Programming
+
+a. Overview of Socket Programming
+
+    - Socket programming is a technique used to establish communication between 
+        two devices over a network.
+
+    - Socket programming enables two computers (or programs) to communicate over 
+        a network using standard protocols like TCP or UDP.
+
+    - A socket is defined as a combination of IP address and port number.
+
+    - It provides an interface for sending and receiving data between applications.
+
+    - Supports two-way communication, allowing client-server architecture.
+
+    - Commonly used in:
+
+            - Chat applications
+
+            - File sharing systems
+
+            - Web servers and browsers
+
+
+
+b. Introduction of APIs related to Socket Programming
+
+    - Java provides the java.net package for socket programming.
+
+    - APIs used in socket programming are:
+
+            1. Socket – For TCP client communication.
+
+            2. ServerSocket – For TCP server to listen and accept client connections.
+
+            3. DatagramSocket – For UDP communication (both client and server).
+
+            4. DatagramPacket – Used to send and receive data in UDP.
+
+            5. InetAddress – Handles IP address-related information.
+
+    - These classes help in building network-enabled applications with different protocols.
+
+    - The APIs provides low-level network details and provide easy-to-use methods.
+
+
+
+c. Server Side Programming [TCP and UDP]
+
+    1.TCP Server (Reliable, connection-oriented)
+
+        -Create a ServerSocket to listen on a specific port. 
+
+        -Wait and accept a client connection using accept().
+
+        -Use InputStream and OutputStream to read/write data.
+
+        -Close the connection after communication ends.
+
+        Basic Steps:
+
+            -ServerSocket server = new ServerSocket(port);
+
+            -Socket client = server.accept();
+
+            -Communicate using streams.
+
+            -client.close(); server.close();
+
+    2.UDP Server (Fast, connectionless)
+
+        -Create a DatagramSocket on a specific port.
+
+        -Receive data using receive(DatagramPacket).
+
+        -Process and send a reply using send(DatagramPacket).
+
+        -No connection is established.
+
+        Basic Steps:
+
+            -DatagramSocket socket = new DatagramSocket(port);
+
+            -Receive packet: socket.receive(packet);
+
+            -Send response: socket.send(packet);
+
+            -socket.close();
+
+
+
+d. Client Side Programming [TCP and UDP]
+
+    1.TCP Client (Connection-oriented):
+
+        -Create a Socket by specifying server IP and port.
+ 
+        -Use input/output streams to send and receive data.
+
+        -Close the socket when done.
+
+        Basic Steps:
+
+            -Socket socket = new Socket("server_ip", port);
+
+            -Communicate via streams (InputStream, OutputStream).
+
+            -socket.close();
+
+    2.UDP Client (Connectionless):
+
+        -Create a DatagramSocket (no need to specify port).
+
+        -Prepare data in a DatagramPacket with server’s IP and port.
+
+        -Send data using send().
+
+        -Receive responses using receive().
+
+        -Close the socket when done.
+
+        Basic Steps:
+
+            -DatagramSocket socket = new DatagramSocket();
+
+            -Create and send DatagramPacket.
+
+            -Receive response packet.
+
+            -socket.close();
+            
+

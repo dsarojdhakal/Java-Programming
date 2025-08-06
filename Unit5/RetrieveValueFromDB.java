@@ -15,7 +15,7 @@ public class RetrieveValueFromDB {
         String password = "password";
 
         try {
-            //Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
             Connection conn = DriverManager.getConnection(url, user, password);
             System.out.println("Connected to the database!");
