@@ -12,11 +12,18 @@ public class TreeExample {
         DefaultMutableTreeNode bit = new DefaultMutableTreeNode("BIT");
         DefaultMutableTreeNode bit1 = new DefaultMutableTreeNode("BIT-1");
         DefaultMutableTreeNode bit2 = new DefaultMutableTreeNode("BIT-2");
+        DefaultMutableTreeNode bit3 = new DefaultMutableTreeNode("BIT-3");
         DefaultMutableTreeNode bba1 = new DefaultMutableTreeNode("BBA-1");
+        DefaultMutableTreeNode bba2 = new DefaultMutableTreeNode("BBA-2");
+        DefaultMutableTreeNode bba3 = new DefaultMutableTreeNode("BBA-3");
+
 
         bit.add(bit1);
         bit.add(bit2);
+        bit.add(bit3);
         bba.add(bba1);
+        bba.add(bba2);
+        bba.add(bba3);
         semester.add(bba);
         semester.add(bit);
 

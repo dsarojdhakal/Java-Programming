@@ -104,6 +104,16 @@ Engineer from TU
 Github : https://github.com/dsarojdhakal
 Nepal
 
-License
-This content is intended for educational use only.
-Reuse and distribution are allowed with proper citation.
+## 📄 License
+
+This content is authored by Saroj Dhakal and is intended strictly for **educational and personal use only**.  
+Commercial use, including **selling or redistributing** this material for profit, is **not permitted**.
+
+You may:
+- View, use, and share this material freely for non-commercial learning.
+- Modify or adapt the material with proper credit to the author.
+
+See [LICENSE](./LICENSE) for full terms.
+
+(c) 2025 Saroj Dhakal  
+All rights reserved.
