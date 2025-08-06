@@ -3,8 +3,7 @@ import java.net.DatagramSocket;
 
 public class UDPServer {
     public static void main(String[] args) {
-        int port = 1234; // Port number for the server
-
+        int port = 1234;
         try {
             // Step 1: Create a DatagramSocket
             DatagramSocket socket = new DatagramSocket(port);
@@ -12,7 +11,7 @@ public class UDPServer {
 
             while (true) {
                 // Step 2: Prepare to receive data
-                byte[] receiveData = new byte[1024]; // Buffer for incoming data
+                byte[] receiveData = new byte[1024]; 
                 DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
 
                 // Step 3: Receive a packet from the client
@@ -33,7 +32,7 @@ public class UDPServer {
             }
 
             // Step 6: Close the socket 
-            //socket.close();
+            socket.close();
 
         } catch (Exception e) {
             e.printStackTrace();

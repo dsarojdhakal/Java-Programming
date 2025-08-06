@@ -5,16 +5,16 @@ import java.net.InetAddress;
 
 public class UDPClient {
     public static void main(String[] args) {
-        String serverAddress = "localhost"; // Server address (use IP address or hostname)
-        int serverPort = 1234; // Server port
-        String messageToSend = "Hello, UDP Server!"; // Message to send
+        String serverAddress = "localhost";
+        int serverPort = 1234; 
+        String messageToSend = "Hello, UDP Server!";
 
         try {
             // Step 1: Create a DatagramSocket
             DatagramSocket socket = new DatagramSocket();
 
             // Step 2: Prepare the data to be sent
-            byte[] sendData = messageToSend.getBytes(); // Convert the message to bytes
+            byte[] sendData = messageToSend.getBytes();
 
             // Step 3: Create a DatagramPacket for sending
             InetAddress serverInetAddress = InetAddress.getByName(serverAddress);
@@ -25,7 +25,7 @@ public class UDPClient {
             System.out.println("Sent: " + messageToSend);
 
             // Step 5: Prepare to receive the response
-            byte[] receiveData = new byte[1024]; // Buffer for incoming data
+            byte[] receiveData = new byte[1024]; 
             DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
 
             // Step 6: Receive the response from the server
