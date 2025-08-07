@@ -14,8 +14,7 @@ public class JButtonExample {
         JTextField fieldUsername = new JTextField();
         JPasswordField fieldPassword = new JPasswordField();
         JLabel displayMessage = new JLabel();
-        JButton loginBtn = new JButton();
-        loginBtn.setText("Log In");
+        JButton loginBtn = new JButton("Log In");
 
         labelUsername.setBounds(20, 20, 100, 30);
         labelPassword.setBounds(20, 60, 100, 30);

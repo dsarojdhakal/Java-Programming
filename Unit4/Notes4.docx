@@ -2,65 +2,66 @@
 UNIt 4: Java IO
 
 
-Working with Input/output APIs
+a.Working with Input/output APIs
 
-  Java provides several APIs for input and output (IO) operations.
-  The main packages is java.io.
- 
-  - java.io: Provides classes for system input and output through data streams, serialization, and the file system.
- 
-  Common IO Classes:
-  - InputStream / OutputStream: For reading/writing byte streams.
-  - Reader / Writer: For reading/writing character streams.
-  - FileInputStream / FileOutputStream: For file byte streams.
-  - FileReader / FileWriter: For file character streams.
-  - BufferedReader / BufferedWriter: For efficient reading/writing of text.
-  - Scanner: For primitive types(like int, double, etc.) and strings.
+        - Java provides several APIs for input and output (IO) operations.
+        - The main packages is java.io.*;
+        - we can import io package from : import java.io.*;
 
+        - java.io: Provides classes for system input and output through data streams, serialization, and the file system.
 
-
-Working with Scanner Class (Provides Methods):
-
-  The Scanner class (java.util.Scanner) is used to read input from various sources like keyboard, files, and streams.
-  Commonly used methods:
-    - next(): Reads the next token as a String.
-    - nextLine(): Reads the entire line as a String.
-    - nextInt(): Reads the next token as an int.
-    - nextDouble(): Reads the next token as a double.
-    - hasNext(): Checks if there is another token.
-    - hasNextInt(): Checks if the next token is an int.
-    - hasNextLine(): Checks if there is another line.
+        Common IO Classes:
+                - InputStream / OutputStream: For reading/writing byte streams.
+                - Reader / Writer: For reading/writing character streams.
+                - FileInputStream / FileOutputStream: For file byte streams.
+                - FileReader / FileWriter: For file character streams.
+                - BufferedReader / BufferedWriter: For efficient reading/writing of text.
+                - Scanner: For primitive types(like int, double, etc.) and strings.
 
 
 
-Working with Files:
+b.Working with Scanner Class (Provides Methods):
 
-    Java provides the java.io.File class and java.nio.file package to work with files and directories.
-
-        - java.io.File: Represents files and directories. Can be used to create, delete, and get information about files/directories.
-            Example:
-                File file = new File("example.txt");
-                if (file.exists()) {
-                        System.out.println("File exists");
-                }
-
-        - java.nio.file.Files and Paths: Provides more advanced file operations (since Java 7).
-            Example:
-                Path path = Paths.get("example.txt");
-                if (Files.exists(path)) {
-                        System.out.println("File exists");
-                }
-
-    Common file operations:
-            - Creating a new file or directory
-            - Deleting a file or directory
-            - Reading from and writing to files
-            - Listing files in a directory
+        The Scanner class (java.util.Scanner) is used to read input from various sources like keyboard, files, and streams.
+        Commonly used methods:
+        - next(): Reads the next token as a String.
+        - nextLine(): Reads the entire line as a String.
+        - nextInt(): Reads the next token as an int.
+        - nextDouble(): Reads the next token as a double.
+        - hasNext(): Checks if there is another token.
+        - hasNextInt(): Checks if the next token is an int.
+        - hasNextLine(): Checks if there is another line.
 
 
 
+c.Working with Files:
 
-Working with Object Serialization in Java (JAVA IO):
+        Java provides the java.io.File class and java.nio.file package to work with files and directories.
+
+                - java.io.File: Represents files and directories. Can be used to create, delete, and get information about files/directories.
+                Example:
+                        File file = new File("example.txt");
+                        if (file.exists()) {
+                                System.out.println("File exists");
+                        }
+
+                - java.nio.file.Files and Paths: Provides more advanced file operations (since Java 7).
+                Example:
+                        Path path = Paths.get("example.txt");
+                        if (Files.exists(path)) {
+                                System.out.println("File exists");
+                        }
+
+        Common file operations:
+                - Creating a new file or directory
+                - Deleting a file or directory
+                - Reading from and writing to files
+                - Listing files in a directory
+
+
+
+
+d.Working with Object Serialization in Java (JAVA IO):
 
         Object serialization is the process of converting an object into a byte stream so that it can be saved to a file or transmitted over a network. Deserialization is the reverse process—converting a byte stream back into an object.
 
