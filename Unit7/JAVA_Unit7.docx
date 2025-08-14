@@ -52,3 +52,60 @@ c. RMI Architecture
         4. Skeleton – Receives request (used in old Java versions).
         
         5. Remote Object – The actual object that runs on server.
+
+
+d. Steps to write distributed object (RMI) program.
+    Step 1: Create a Remote Interface
+            Define methods to be called remotely.
+            Extend java.rmi.Remote.
+            Each method must throw RemoteException.
+
+    Step 2: Implement the Remote Interface
+            Create a class that implements the interface.
+            Extend UnicastRemoteObject to make the object remotely accessible.
+            Provide the actual method definitions.
+
+    Step 3: Write the Server Program
+            Create an object of the implementation class.
+            Register the object with the RMI Registry using Naming.rebind().
+            Start the server to listen for client requests.
+
+    Step 4: Write the Client Program
+            Look up the remote object using Naming.lookup() with the service name.
+            Call the remote methods as if they were local.
+            Handle the returned response.
+
+e. Stub and Skeleton
+    Stub
+        Lives on the client side.
+        Works like a fake copy of the remote object.
+        Client calls methods on the stub just like calling local methods.
+        Packs (marshals) method name and parameters into a message.
+        Sends the message to the server over the network.
+        Waits for the server’s reply.
+        Unpacks (unmarshals) the reply and returns it to the client program.
+        Makes remote calls look and feel like local calls.
+        
+    Skeleton (used in older RMI versions)
+        Lives on the server side.
+        Receives the message from the stub.
+        Unpacks the method name and parameters.
+        Calls the actual method on the real remote object.
+        Packs (marshals) the result or error.
+        Sends it back to the client’s stub.
+        In modern Java, this step is handled internally by the RMI framework (no skeleton file needed).
+
+
+
+f. how stub and skeleton work together in RMI:
+    Client calls a method on the stub (thinking it’s calling a local object).
+    Stub lives on the client side and takes the method name and parameters.
+    Stub marshals (packs) the data into a network-friendly format.
+    Stub sends this data over the network to the server.
+    Skeleton lives on the server side and receives the request from the stub.
+    Skeleton unmarshals (unpacks) the method name and parameters.
+    Skeleton calls the actual method on the real remote object implementation.
+    The remote object executes the method and gives the result to the skeleton.
+    Skeleton marshals the result (or any exception) and sends it back over the network.
+    Stub receives the reply from the server.
+    Stub unmarshals the result and gives it to the client program.

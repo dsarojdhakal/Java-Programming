@@ -14,6 +14,7 @@ public class CreateTableJDBC {
                                 "phone VARCHAR(15)" +
                                 ")";
 
+
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -25,7 +26,8 @@ public class CreateTableJDBC {
 
             stmt.close();
             conn.close();
-        } catch (Exception e) {
+        } 
+        catch (Exception e) {
             e.printStackTrace();
         }
     }

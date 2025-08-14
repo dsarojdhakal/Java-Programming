@@ -1,3 +1,10 @@
+//Write a program to demonstrate RMI (Remote Method Invocation) in Java.
+//step-1 Create a Remote Interface
+//step-2 Implement the Remote Interface
+//step-3 Write server program
+//step-4 Write client program
+
+
 // Remote Interface
 import java.rmi.*;
 

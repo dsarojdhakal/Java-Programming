@@ -1,0 +1,89 @@
+a. Introduction to Servlet and JSP and its Architecture
+
+    Servlet
+
+        Java program that runs on a web server.
+
+        Handles requests and responses in web applications.
+
+        Works on server-side to generate dynamic content.
+
+        Extends the HttpServlet class for HTTP-based services.
+        
+        Servlet → Handles business logic (processing, database operations).
+
+        Features
+
+            Platform-independent (Java-based).
+
+            Efficient and fast (uses multithreading).
+
+            Secure and portable.
+
+
+    JSP (JavaServer Pages)
+
+        Technology to create dynamic web pages using HTML + Java code.
+
+        Easier to write than Servlets (less Java code, more HTML).
+
+        Compiled into a Servlet by the server during first execution.
+
+        Best suited for presentation logic.
+
+        Features
+
+            Allows mixing Java code with HTML using special tags.
+
+            Supports tag libraries (JSTL).
+
+            Automatically managed lifecycle by the server.
+
+
+        Servlet → Handles business logic (processing, database operations).
+
+        JSP → Handles presentation logic (UI).
+
+        Together they follow MVC architecture.
+
+
+
+    Servlet Architecture
+
+        Client sends HTTP request (e.g., from browser).
+
+        Web Server (e.g., Tomcat) passes request to Servlet container.
+
+        Servlet processes request, interacts with database if needed.
+
+        Servlet sends the result to the Web Server.
+
+        Web Server sends the final response back to the Client.
+
+
+    JSP Architecture
+
+        Client requests .jsp file.
+
+        Server converts JSP into a Servlet (only the first time).
+
+        Generated Servlet is compiled into a .class file.
+
+        Servlet processes the request, interacts with the database if needed.
+
+        Servlet sends the result to the Web Server.
+
+        Web Server sends the final HTML response back to the Client.
+
+
+b. Configuring Apache Tomcat to Host Servlet/JSP Files
+
+    Apache Tomcat is a free, open-source web server and servlet container developed by the Apache Software Foundation.
+
+    In simple terms:
+
+    It is software that runs Java-based web applications.
+
+    It understands Servlet and JSP code and turns them into working web pages.
+
+    It follows Java EE specifications for web technologies.

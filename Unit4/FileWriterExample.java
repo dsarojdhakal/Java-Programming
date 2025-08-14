@@ -1,16 +1,12 @@
 //WAP to create a file named example.txt  and store data in the file using FileWriter
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileWriterExample {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         String data = "Hello welcome to Bachelor of\nInformation Technology";
-        File file = new File("example.txt");
-
-        if(file.exists()){
             try {
-                FileWriter writer = new FileWriter(file);
+                FileWriter writer = new FileWriter("example.txt");
                 writer.write(data);
                 System.out.println("Data has been written to the file.");
                 writer.close();
@@ -19,10 +15,5 @@ public class FileWriterExample {
                 System.out.println("An error occurred ");
                 e.getMessage();
             }
-        }
-        else{
-            System.out.println("File Doesn't Exists");
-        }
-        
-    }
+        }     
 }

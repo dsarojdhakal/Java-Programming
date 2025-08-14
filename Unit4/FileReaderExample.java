@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class FileReaderExample {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         try (FileReader reader = new FileReader("example.txt")) {
             int x;
 
@@ -12,7 +12,6 @@ public class FileReaderExample {
             }
             
         } catch (IOException e) {
-            System.out.println("An error occurred ");
             e.printStackTrace();
         }
     }

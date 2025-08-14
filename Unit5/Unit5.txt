@@ -80,8 +80,7 @@ b.Different Types of Database Drivers in JDBC
 
         -Example: IBM WebSphere’s JDBC driver.
 
-
-    4. Type 4: Thin Driver (Pure Java Driver)
+4. Type 4: Thin Driver (Pure Java Driver)
 
         -Converts JDBC calls directly into the database protocol.
 
